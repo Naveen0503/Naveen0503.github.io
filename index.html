@@ -3,8 +3,20 @@
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous">
   <style>
+    .background-container  {
+      background: url('BG4.jpg') center/cover;
+      height: 100vh;
+      overflow: hidden; /* Ensure the background doesn't overflow */
+    }
+
+    .aboutme-container {
+      background: url('BG5.jpg') center/cover;
+      height: 100vh;
+      overflow: hidden; /* Ensure the background doesn't overflow */
+    }
+
     body {
-      background-color: #000000;
+      margin: 0;
       color: white; 
       font-family: 'Arial', sans-serif;
     }
@@ -21,8 +33,8 @@
       width: 100%;
       padding: 20px;
       border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-      background-color: #41436A;
+      box-shadow: 10px 10px 10px black;
+      background: url('BG4.jpg') center/cover;
     }
 
     .profile-image {
@@ -32,29 +44,16 @@
 
     .intro-text {
       text-align: center;
-    }
-
-    .name-small {
-      font-size: 1.2em;
-      margin-bottom: 5px;
-    }
-
-    .name-big {
-      font-size: 2.5em;
-      margin-bottom: 10px;
-      font-weight: bold;
-    }
-
-    .role-line {
-      font-size: 1.8em;
-      margin-bottom: 20px;
+      margin: auto;
+      font-size: large;
+      color: white;
     }
 
     .about-me-button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #333; /* Dark gray button background */
-      color: #fff; /* White button text */
+      background-color: #07152e; 
+      color: #fff;
       text-decoration: none;
       border-radius: 5px;
       font-size: 1.5em;
@@ -63,24 +62,37 @@
     }
 
     .about-me-button:hover {
-      background-color: #555; /* Darker gray on hover */
+      background-color: #012e72;
     }
   </style>
 </head>
 <body>
 
-  <div class="container landing-container">
-    <img src="profileimg.jpg" alt="Profile Image" class="profile-image">
-    <div class="intro-text">
-      <div class="name-small">my name is</div>
-      <div class="name-big">Naveen Kumar</div>
-      <div class="role-line">I am a full-stack developer</div>
-      <a href="#about-me" class="about-me-button">About Me</a>
+  <div class="background-container">
+    <div class="container landing-container">
+      <img src="profileimg.jpg" alt="Profile Image" class="profile-image">
+      <div class="intro-text">
+        <h2>Hello,</h2>
+        <h2>I'm Naveen Kumar</h2> 
+        <h2>a Full Stack Developer</h2>
+        <a href="#about-me" class="about-me-button">About Me</a>
+      </div>
     </div>
   </div>
+<div id="about-me" class="aboutme-container">
 
+</div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-8NQq+52bs2kXXLpIcXJnujsl5+zjpUuUAd9q9lJpWWKPHFQN/6vN6s1jA1S9A1pg" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous"></script>
+  <script>
+    $(document).ready(function() {
+      $(".about-me-button").click(function() {
+        $('html, body').animate({
+          scrollTop: $("#about-me").offset().top
+        }, 1000);
+      });
+    });
+  </script>
 </body>
 </html>
