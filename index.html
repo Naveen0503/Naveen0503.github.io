@@ -6,13 +6,14 @@
     .background-container  {
       background: url('BG4.jpg') center/cover;
       height: 100vh;
-      overflow: hidden; /* Ensure the background doesn't overflow */
+      overflow: hidden;
     }
 
     .aboutme-container {
-      background: url('BG5.jpg') center/cover;
+    background: #07152e;
       height: 100vh;
-      overflow: hidden; /* Ensure the background doesn't overflow */
+      overflow: hidden;
+      display: flex;
     }
 
     body {
@@ -38,10 +39,13 @@
     }
 
     .profile-image {
-      width: 50%;
+      width: 50%; 
       margin-bottom: 20px;
     }
 
+   .about-me-image{
+      width: 30%; 
+   }
     .intro-text {
       text-align: center;
       margin: auto;
@@ -64,6 +68,17 @@
     .about-me-button:hover {
       background-color: #012e72;
     }
+
+    .about-me-content {
+      display: flex;
+      align-items: center; /* Center vertically */
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .about-me-text {
+      width: 50%;
+    }
   </style>
 </head>
 <body>
@@ -79,9 +94,17 @@
       </div>
     </div>
   </div>
-<div id="about-me" class="aboutme-container">
 
-</div>
+  <div id="about-me" class="aboutme-container">
+    <div class="container about-me-content">
+      <img src="profileimg.jpg" alt="Profile Image" class="about-me-image">
+      <div class="about-me-text">
+        <h2>About Me</h2>
+        <p>My name is Naveen Kumar.i'm a .NET full stack developer based in Visakhapatnam,Andhrapradesh and i'm very passionate and dedicated to my work with 2yrs experienced as a professional Full Stack Developer.I have acquired the skills necessary to build great , interactive and premium web applications and websites. </p>
+      </div>
+    </div>
+  </div>
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-8NQq+52bs2kXXLpIcXJnujsl5+zjpUuUAd9q9lJpWWKPHFQN/6vN6s1jA1S9A1pg" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous"></script>
