@@ -10,9 +10,15 @@
       overflow: hidden;
     }
 
-    .aboutme-container {
+    .aboutme-container ,.react-container{
       background: #07152e;
       height:100vh;
+    }
+
+    .react-container{
+      background:  url('BG5.jpg') center/cover;
+      height:100vh;
+      overflow: hidden;
     }
 
     body {
@@ -102,8 +108,6 @@
       font-size: 2em;
     }
 
-    
-
     .rating-container {
       display: flex;
       align-items: center;
@@ -124,11 +128,42 @@
       display: flex;
       justify-content: space-between;
     }
+
+    .slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+  margin-top: 7rem;
+  border-radius: 5px;
+}
+
+
+
+.active {
+  background-color: #717171;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+.project-header{
+  margin:0px;
+  position: relative;
+    top: 10%;
+    left: 8%;
+    color: #7a89b2;
+}
   </style>
 </head>
 <body>
 
-  <div class="background-container">
+  <div class="background-container">  
     <div class="container landing-container">
       <img src="profileimg.jpg" alt="Profile Image" class="profile-image">
       <div class="intro-text">
@@ -243,7 +278,44 @@
     </div>
     <a class="download-button" id="download-cv-button">Download CV</a>
   </div>
+<div class="react-container">
+  <h2 class="project-header">Projects Uisng React :</h2>
 
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img3.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img6.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img8.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img2.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img5.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img1.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img7.png" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img4.png" style="width:100%">
+</div>
+</div>
+</div>
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-8NQq+52bs2kXXLpIcXJnujsl5+zjpUuUAd9q9lJpWWKPHFQN/6vN6s1jA1S9A1pg" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous"></script>
@@ -266,7 +338,23 @@
     });
 
     });
-
 </script>
+<script>
+  let slideIndex = 0;
+  showSlides();
+  
+  function showSlides() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    
+    slides[slideIndex-1].style.display = "block";  
+    setTimeout(showSlides, 5000); 
+  }
+  </script>  
 </body>
 </html>
