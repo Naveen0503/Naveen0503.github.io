@@ -2,23 +2,22 @@
 <html lang="en">
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
-    .background-container  {
+    .background-container {
       background: url('BG4.jpg') center/cover;
       height: 100vh;
       overflow: hidden;
     }
 
     .aboutme-container {
-    background: #07152e;
-      height: 100vh;
-      overflow: hidden;
-      display: flex;
+      background: #07152e;
+      height:100vh;
     }
 
     body {
       margin: 0;
-      color: white; 
+      color: white;
       font-family: 'Arial', sans-serif;
     }
 
@@ -39,13 +38,14 @@
     }
 
     .profile-image {
-      width: 50%; 
+      width: 50%;
       margin-bottom: 20px;
     }
 
-   .about-me-image{
-      width: 30%; 
-   }
+    .about-me-image {
+      width: 30%;
+    }
+
     .intro-text {
       text-align: center;
       margin: auto;
@@ -56,7 +56,7 @@
     .about-me-button {
       display: inline-block;
       padding: 10px 20px;
-      background-color: #07152e; 
+      background-color: #012e72;
       color: #fff;
       text-decoration: none;
       border-radius: 5px;
@@ -64,20 +64,65 @@
       font-weight: bold;
       transition: background-color 0.3s ease;
     }
-
-    .about-me-button:hover {
+     
+    .download-button{
+      display: inline-block;
+      padding: 10px 20px;
       background-color: #012e72;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      font-size: 1.5em;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      position: absolute;
+      left: 45%;
+    }
+   
+    .download-button:hover , .about-me-button:hover{
+      background-color: #7a89b2;
     }
 
     .about-me-content {
       display: flex;
-      align-items: center; /* Center vertically */
+      align-items: center;
       justify-content: space-around;
       padding: 20px;
     }
 
     .about-me-text {
       width: 50%;
+    }
+
+    .skills-container {
+      margin-top: 20px;
+    }
+
+    .skills-heading {
+      font-size: 2em;
+    }
+
+    
+
+    .rating-container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .fa-star {
+      color: #ccc;
+      font-size: 1.5em;
+      margin-right: 5px;
+    }
+
+    .checked {
+      color: #ffcc00;
+    }
+
+    .skills-row{
+      display: flex;
+      justify-content: space-between;
     }
   </style>
 </head>
@@ -88,7 +133,7 @@
       <img src="profileimg.jpg" alt="Profile Image" class="profile-image">
       <div class="intro-text">
         <h2>Hello,</h2>
-        <h2>I'm Naveen Kumar</h2> 
+        <h2>I'm Naveen Kumar</h2>
         <h2>a Full Stack Developer</h2>
         <a href="#about-me" class="about-me-button">About Me</a>
       </div>
@@ -100,22 +145,128 @@
       <img src="profileimg.jpg" alt="Profile Image" class="about-me-image">
       <div class="about-me-text">
         <h2>About Me</h2>
-        <p>My name is Naveen Kumar.i'm a .NET full stack developer based in Visakhapatnam,Andhrapradesh and i'm very passionate and dedicated to my work with 2yrs experienced as a professional Full Stack Developer.I have acquired the skills necessary to build great , interactive and premium web applications and websites. </p>
+        <p>
+          Hello, I'm Naveen Kumar, a skilled Full Stack Developer with 2 years of experience. My expertise lies in a range of technologies, including ASP.NET, .NET Core, .NET Core Web API, and .NET Core MVC. I am also proficient in front-end technologies such as React, HTML, CSS, and JavaScript. My passion for creating robust and user-friendly applications drives me to stay updated with the latest trends in web development. I enjoy tackling challenges and continuously expanding my skill set to deliver high-quality solutions. I'm certified in Azure Fundamentals (AZ-900) and Azure Developer Associate (AZ-204), demonstrating my expertise in cloud technologies. My passion lies in creating efficient and user-friendly applications, and I'm committed to continuous learning.
+        </p>
+        <div class="container skills-container">
+          <h2 class="skills-heading">Skills</h2>
+          <div class="row skills-row">
+            <div class="col-md-6 skill-category">
+              <h4>Backend</h4>
+              <div class="rating-container">
+                <p>ASP.NET</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>.NET Core</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>.NET Core Web API</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>.NET Core MVC</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6 skill-category">
+              <h4>Frontend</h4>
+              <div class="rating-container">
+                <p>React</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>HTML</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>CSS</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                </div>
+              </div>
+              <div class="rating-container">
+                <p>JavaScript</p>
+                <div class="rating">
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star checked"></span>
+                  <span class="fa fa-star"></span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+    <a class="download-button" id="download-cv-button">Download CV</a>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js" integrity="sha384-8NQq+52bs2kXXLpIcXJnujsl5+zjpUuUAd9q9lJpWWKPHFQN/6vN6s1jA1S9A1pg" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8sh+WyIx2zHDV3eHhqFCv6q2FSCDp3GOErLIJl" crossorigin="anonymous"></script>
-  <script>
-    $(document).ready(function() {
+<script>
+   $(document).ready(function() {
       $(".about-me-button").click(function() {
         $('html, body').animate({
           scrollTop: $("#about-me").offset().top
         }, 1000);
       });
+
+      $("#download-cv-button").click(function() {
+      var pdfPath = 'NAVEEN KUMAR AVU.pdf';
+      var link = document.createElement('a');
+      link.href = pdfPath;
+      link.download = 'NAVEEN_KUMAR_AVU.PDF';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
     });
-  </script>
+
+    });
+
+</script>
 </body>
 </html>
