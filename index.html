@@ -10,11 +10,15 @@
       overflow: hidden;
     }
 
-    .aboutme-container ,.react-container{
+    .aboutme-container ,.heaveninn-container{
       background: #07152e;
       height:100vh;
     }
-
+   .heaveninn-container{
+    place-items: center;
+    display: flex;
+    justify-content: space-around;
+   }
     .react-container{
       background:  url('BG5.jpg') center/cover;
       height:100vh;
@@ -23,7 +27,7 @@
 
     body {
       margin: 0;
-      color: white;
+      color: #ccc;
       font-family: 'Arial', sans-serif;
     }
 
@@ -159,6 +163,16 @@
     left: 8%;
     color: #7a89b2;
 }
+
+.project-info {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .technologies {
+        display: flex;
+        justify-content: space-evenly;
+    }
   </style>
 </head>
 <body>
@@ -277,6 +291,33 @@
       </div>
     </div>
     <a class="download-button" id="download-cv-button">Download CV</a>
+  </div>
+  <div class="heaveninn-container">
+    <div class="Heaven-inn-project">
+      <div class="project-info">
+        <h2>HavenInn</h2>
+        <h3>About the project:</h3>
+        <p>HavenInn is an internal Hotel management system made to ease the day-to-day tasks in a Hotel.</p>
+    
+        <div class="technologies">
+            <div>
+                <h3>Technologies:</h3>
+                <ul>
+                    <li>.NET Core Web API</li>
+                    <li>React</li>
+                </ul>
+            </div>
+    
+            <div>
+                <h3>GitHub Repository:</h3>
+                <p><a href="https://github.com/Anisha-1801/iTransform-July-2022-Group2-CaseStudy-.git" target="_blank">GitHub Repository</a></p>
+            </div>
+        </div>
+    </div>
+    <video width="800" height="400" style="margin: 10px;" controls>
+      <source src="HavenInn-Demo.mp4" type="video/mp4">
+    </video>
+    </div>
   </div>
 <div class="react-container">
   <h2 class="project-header">Projects Uisng React :</h2>
