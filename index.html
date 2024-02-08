@@ -37,6 +37,7 @@
       color: #ccc;
       font-family: 'Arial', sans-serif;
       overflow-x: hidden;
+      overflow-y: auto;
     }
 
     .landing-container {
@@ -173,6 +174,7 @@
     color: white;
     text-align: center;
     padding: 20px 0;
+    border-top-style: solid;
   }
 
   footer p {
@@ -183,12 +185,66 @@
     color: white;
     font-size: 1em; /* Adjust the font size as needed */
   }
+  .header-container {
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+    right: 10%;
+    position: relative;
+    top: 5%;
+  }
 
+  .header-link {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold; /* Add bold font */
+  }
+
+  .header-dropdown {
+    position: relative;
+  }
+
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #07152e;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    border-radius: 5px;
+  }
+
+  .header-dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+
+  .dropdown-content a:hover {
+    background-color: #7a89b2;
+  }
 </style>
 </head>
 <body>
   
   <div class="background-container">  
+    <div class="header-container">
+      <a href="#about-me" class="header-link">About Me</a>
+      <a href="#footer" class="header-link">Contact Me</a>
+      <div class="header-dropdown">
+        <a href="#" class="header-link">My Projects</a>
+        <div class="dropdown-content">
+          <a href="#react-container">React Projects</a>
+          <a href="#heaveninn-container">.NET Projects</a>
+        </div>
+      </div>
+    </div>
     <div class="container landing-container">
       <img src="profileimg.jpg" alt="Profile Image" class="profile-image">
       <div class="intro-text">
@@ -309,7 +365,7 @@
       <a href="https://linkedin.com/in/yourlinkedin" target="_blank" title="LinkedIn"><i class="fa fa-linkedin fa-2x"></i></a>
     </p>
   </div>
-  <div class="heaveninn-container">
+  <div class="heaveninn-container" id="heaveninn-container">
     <div class="Heaven-inn-project">
       <div class="project-info">
         <h2>HavenInn</h2>
@@ -336,7 +392,7 @@
     </video>
     </div>
   </div>
-<div class="react-container">
+<div class="react-container" id="react-container">
   <h2 class="project-header">Projects Uisng React :</h2>
   <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
     <div class="carousel-inner">
@@ -375,7 +431,7 @@
     </button>
   </div>
 </div>
-<footer>
+<footer id="footer">
     <p>
       <a href="mailto:194079.gvp@gmail.com" title="Email"><i class="fa fa-envelope fa-2x"></i></a> &nbsp;&nbsp;
       <a href="tel:+919392722676" title="Phone"><i class="fa fa-phone fa-2x"></i></a> &nbsp;&nbsp;
@@ -389,11 +445,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-bzF8GJRTXD9atfTScsMjOXpVl5CLVxetMFGC7FzPZIlFdLX8fQfD4vuZK61GU5rl" crossorigin="anonymous"></script>
 <script>
    $(document).ready(function() {
-      $(".about-me-button").click(function() {
-        $('html, body').animate({
-          scrollTop: $("#about-me").offset().top
-        }, 1000);
-      });
+     
 
       $("#download-cv-button").click(function() {
       var pdfPath = 'NAVEEN KUMAR AVU.pdf';
